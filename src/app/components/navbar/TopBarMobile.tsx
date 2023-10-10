@@ -5,10 +5,10 @@ import Link from "next/link";
 const TopBarMobile = () => {
   const [isOpenNav, setIsOpenNav] = useState(false);
 
-  const router = useRouter()
+  const router = useRouter();
   return (
     <>
-      <nav className="navbar fixed top-0 bg-[#69483E]/80 w-full h-[80px] flex items-center px-10 z-50 shadow-md justify-between">
+      <nav className="navbar fixed top-0 bg-[#69483E]/80 w-full h-[80px] flex items-center px-10 z-[99999] shadow-md justify-between">
         <div className="flex relative">
           <h3 className="text-3xl font-['Quicksand'] text-neutral-100">
             Restoran
@@ -43,33 +43,83 @@ const TopBarMobile = () => {
         </button>
       </nav>
 
-      <aside className={`sidebar fixed top-20 w-[270px] h-full z-40 bg-[#69483E] duration-500 ${isOpenNav === true ? "left-0 opacity-80" : "-left-[270px] opacity-0"}`}>
+      <aside
+        className={`sidebar fixed top-20 w-[270px] h-full z-[99998] bg-[#69483E] duration-500 ${
+          isOpenNav === true ? "left-0 opacity-80" : "-left-[270px] opacity-0"
+        }`}
+      >
         <ul className="flex flex-col gap-y-5 mt-10 px-5">
           <li>
-            <Link href="#" className={`text-md font-['Quicksand'] block hover:text-amber-500 duration-100 ${router.pathname === "/" ?  "text-amber-400" : "text-neutral-50"}`}>BERANDA</Link>
+            <Link
+              href="/"
+              className={`text-md font-['Quicksand'] block hover:text-amber-500 duration-100 ${
+                router.pathname === "/" ? "text-amber-400" : "text-neutral-50"
+              }`}
+            >
+              HOME
+            </Link>
           </li>
 
           <li>
-            <Link href="#" className={`text-md font-['Quicksand'] block hover:text-amber-500 duration-100 ${router.pathname === "/tentang-kami" ?  "text-amber-400" : "text-neutral-50"}`}>TENTANG KAMI</Link>
+            <Link
+              href="/menu"
+              className={`text-md font-['Quicksand'] block hover:text-amber-500 duration-100 ${
+                router.pathname === "/menu"
+                  ? "text-amber-400"
+                  : "text-neutral-50"
+              }`}
+            >
+              MENU
+            </Link>
           </li>
 
           <li>
-            <Link href="#" className={`text-md font-['Quicksand'] block hover:text-amber-500 duration-100 ${router.pathname === "/menu" ?  "text-amber-400" : "text-neutral-50"}`}>MENU</Link>
-          </li>
-          
-          <li>
-            <Link href="#" className={`text-md font-['Quicksand'] block hover:text-amber-500 duration-100 ${router.pathname === "/events" ?  "text-amber-400" : "text-neutral-50"}`}>EVENTS</Link>
+            <Link
+              href="/events"
+              className={`text-md font-['Quicksand'] block hover:text-amber-500 duration-100 ${
+                router.pathname === "/events"
+                  ? "text-amber-400"
+                  : "text-neutral-50"
+              }`}
+            >
+              EVENTS
+            </Link>
           </li>
 
           <li>
-            <Link href="#" className={`text-md font-['Quicksand'] block hover:text-amber-500 duration-100 ${router.pathname === "/reservasi" ?  "text-amber-400" : "text-neutral-50"}`}>RESERVASI</Link>
+            <Link
+              href="/reservation"
+              className={`text-md font-['Quicksand'] block hover:text-amber-500 duration-100 ${
+                router.pathname === "/reservasi"
+                  ? "text-amber-400"
+                  : "text-neutral-50"
+              }`}
+            >
+              RESERVATION
+            </Link>
           </li>
 
           <li>
-            <Link href="#" className={`text-md font-['Quicksand'] block hover:text-amber-500 duration-100 ${router.pathname === "/lokasi" ?  "text-amber-400" : "text-neutral-50"}`}>LOKASI</Link>
+            <Link
+              href="/location"
+              className={`text-md font-['Quicksand'] block hover:text-amber-500 duration-100 ${
+                router.pathname === "/lokasi"
+                  ? "text-amber-400"
+                  : "text-neutral-50"
+              }`}
+            >
+              LOCATION
+            </Link>
           </li>
         </ul>
       </aside>
+
+      {isOpenNav === true && (
+        <div
+          className="bg-neutral-900/20 inset-0 fixed z-[99997]"
+          onClick={() => setIsOpenNav(false)}
+        ></div>
+      )}
     </>
   );
 };

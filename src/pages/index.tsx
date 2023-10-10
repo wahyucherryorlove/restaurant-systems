@@ -5,20 +5,14 @@ import { CompanyInfo } from "@app/components/home/company-info";
 import { Events } from "@components/home/events";
 import { Reservasi } from "@components/home/reservasi";
 import { SeniKue } from "@components/home/seni-kue";
-import { useResponsive } from "@app/utils/useResponsive";
-
-import { TopNavbar } from "@components/navbar";
-import { TopBarMobile } from "@app/components/navbar/TopBarMobile";
 
 import RestaurantIcon from "@icons/restaurant.svg";
 
 const Home: NextPage = () => {
-  const router = useResponsive();
+
 
   return (
     <>
-      {router > 767 ? <TopNavbar /> : <TopBarMobile /> }
-
       <main>
         <section className="flex flex-col items-center pt-28 md:pt-40 pb-[14rem] gap-y-4 bg-[url('/assets/images/home/jumbotron.jpg')] bg-auto bg-repeat">
           <span className="border-[3px] p-4 rounded-full border-amber-500">

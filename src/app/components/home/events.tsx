@@ -11,7 +11,7 @@ const Events = () => {
         New & Events
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center gap-7 w-full xl:w-4/5 px-10">
-        {dummyEvents.map(({ id, text, tanggal, images, alt }) => (
+        {dummyEvents.map(({ id, title, tanggal, images, alt }) => (
           <div className="relative bg-neutral-50 w-full shadow" key={id}>
             <div className="relative w-full h-[200px] overflow-hidden">
               <div className="absolute w-full h-full object-cover scale-100 hover:scale-110 hover:rotate-3 duration-150">
@@ -24,7 +24,7 @@ const Events = () => {
             </div>
             <div className="pt-16 pb-7 w-full flex flex-col gap-y-4 justify-center items-center">
               <h3 className="text-lg font-bold font-['Quicksand'] text-slate-800">
-                {text}
+                {title}
               </h3>
               <span className="text-sm font-bold font-['Roboto'] text-amber-600">
                 {tanggal}
