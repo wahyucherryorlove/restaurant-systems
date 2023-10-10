@@ -13,7 +13,7 @@ const TopNavbar = () => {
           </Link>
         </li>
         <li>
-          <Link href="/menu" className={`font-['Quicksand'] font-normal ${router.pathname === "/menu" ? "text-amber-400" : "text-neutral-50"}`} passHref>
+          <Link href="/menu/breakfast" className={`font-['Quicksand'] font-normal ${router.pathname === "/menu/breakfast" ? "text-amber-400" : "text-neutral-50"}`} passHref>
             MENU
           </Link>
         </li>
