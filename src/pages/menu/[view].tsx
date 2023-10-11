@@ -38,7 +38,7 @@ const MenuPage: NextPage = () => {
         </section>
 
         <section className="pt-[6rem] flex flex-col gap-y-10 px-10 lg:w-4/5 mx-auto">
-          <ul className="flex gap-x-6 justify-center">
+          <ul className="flex gap-x-6 gap-y-2 flex-wrap justify-center">
             <li>
               <Link
                 href="/menu/breakfast"

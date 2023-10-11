@@ -6,6 +6,8 @@ const TopBarMobile = () => {
   const [isOpenNav, setIsOpenNav] = useState(false);
 
   const router = useRouter();
+
+  const { isReady, query } = router;
   return (
     <>
       <nav className="navbar fixed top-0 bg-[#69483E]/80 w-full h-[80px] flex items-center px-10 z-[99999] shadow-md justify-between">
@@ -64,7 +66,11 @@ const TopBarMobile = () => {
             <Link
               href="/menu/breakfast"
               className={`text-md font-['Quicksand'] block hover:text-amber-500 duration-100 ${
-                router.pathname === "/menu/breakfast"
+                (isReady && query.view === "breakfast") ||
+                (isReady && query.view === "drink") ||
+                (isReady && query.view === "meat") ||
+                (isReady && query.view === "dessert") ||
+                (isReady && query.view === "dinner")
                   ? "text-amber-400"
                   : "text-neutral-50"
               }`}

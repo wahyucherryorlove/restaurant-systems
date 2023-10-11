@@ -12,6 +12,8 @@ function MyApp({ Component, pageProps }: AppProps) {
   const width = useResponsive();
 
   const router = useRouter();
+
+  const { isReady, query } = router;
   return (
     <>
       <Head>
@@ -24,7 +26,11 @@ function MyApp({ Component, pageProps }: AppProps) {
         <title>
           {router.pathname === "/"
             ? "Restaurant Systems"
-            : router.pathname === "/menu"
+            : (isReady && query.view === "breakfast") ||
+              (isReady && query.view === "drink") ||
+              (isReady && query.view === "meat") ||
+              (isReady && query.view === "dessert") ||
+              (isReady && query.view === "dinner")
             ? "Menu - Restaurant Systems"
             : router.pathname === "/events"
             ? "Events - Restaurant Systems"
