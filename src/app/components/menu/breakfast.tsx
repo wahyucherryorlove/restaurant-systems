@@ -7,7 +7,7 @@ interface Breakfast {
   price: number;
   images: string;
   timeStamp: string;
-  type: string
+  type: string;
 }
 
 var calendar = new Date();
@@ -33,29 +33,29 @@ const Breakfast = ({
   price,
   images,
   timeStamp,
-  type
+  type,
 }: Breakfast) => {
   return (
-// type === "BreakfastTemp" && (
-  <li className="flex gap-x-5" key={id}>
-  <div className="relative w-[100px] max-w-full max-h-full h-[100px]">
-    <Image
-      src={images}
-      alt="Hello"
-      layout="fill"
-    />
-  </div>
-  <div className="w-full flex flex-col gap-y-2">
-    <div className="flex justify-between">
-      <h2 className="text-lg font-['Quicksand']">{title}</h2>
-      <h5 className="text-sm font-['Roboto'] text-neutral-500 font-bold">{"Rp" + price}</h5>
-    </div>
-    <div className="">
-      <p className="text-sm font-['Roboto'] text-neutral-500">{description}</p>
-    </div>
-  </div>
-</li>
-// )
+    // type === "BreakfastTemp" && (
+    <li className="flex flex-col sm:flex-row gap-x-5" key={id}>
+      <div className="relative w-full h-full sm:w-[100px] sm:h-[100px]">
+        <Image src={images} alt={title} layout="fill" />
+      </div>
+      <div className="w-full flex flex-col gap-y-2">
+        <div className="flex justify-between">
+          <h2 className="text-lg font-['Quicksand']">{title}</h2>
+          <h5 className="text-sm font-['Roboto'] text-neutral-500 font-bold">
+            {"Rp" + price}
+          </h5>
+        </div>
+        <div>
+          <p className="text-sm font-['Roboto'] text-neutral-500">
+            {description}
+          </p>
+        </div>
+      </div>
+    </li>
+    // )
   );
 };
 
