@@ -3,15 +3,16 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import type { NextPage } from "next";
 
-import { CompanyInfo } from "@app/components/home/company-info";
 import { Breakfast } from "@app/components/menu/breakfast";
+import { Drink } from "@app/components/menu/drink";
+import { CompanyInfo } from "@app/components/home/company-info";
 
 import { BreakfastTemp } from "@app/temp/menu/breakfast";
+import { DrinksTemp } from "@app/temp/menu/drinks";
 
 import FlameIcons from "@icons/flame.svg";
 
 const MenuPage: NextPage = () => {
-
   const { isReady, query } = useRouter();
 
   return (
@@ -42,7 +43,11 @@ const MenuPage: NextPage = () => {
             <li>
               <Link
                 href="/menu/breakfast"
-                className={`font-['Quicksand'] text-lg lg:text-xl hover:text-amber-500 ${isReady && query.view === "breakfast" ? "text-neutral-500" : "text-amber-600"}`}
+                className={`font-['Quicksand'] text-lg lg:text-xl hover:text-amber-500 ${
+                  isReady && query.view === "breakfast"
+                    ? "text-neutral-500"
+                    : "text-amber-600"
+                }`}
               >
                 Breakfast
               </Link>
@@ -50,7 +55,11 @@ const MenuPage: NextPage = () => {
             <li>
               <Link
                 href="/menu/drink"
-                className={`font-['Quicksand'] text-lg lg:text-xl hover:text-amber-500 ${isReady && query.view === "drink" ? "text-neutral-500" : "text-amber-600"}`}
+                className={`font-['Quicksand'] text-lg lg:text-xl hover:text-amber-500 ${
+                  isReady && query.view === "drink"
+                    ? "text-neutral-500"
+                    : "text-amber-600"
+                }`}
               >
                 Drinks
               </Link>
@@ -58,7 +67,11 @@ const MenuPage: NextPage = () => {
             <li>
               <Link
                 href="/menu/meat"
-                className={`font-['Quicksand'] text-lg lg:text-xl hover:text-amber-500 ${isReady && query.view === "meat" ? "text-neutral-500" : "text-amber-600"}`}
+                className={`font-['Quicksand'] text-lg lg:text-xl hover:text-amber-500 ${
+                  isReady && query.view === "meat"
+                    ? "text-neutral-500"
+                    : "text-amber-600"
+                }`}
               >
                 Meat
               </Link>
@@ -66,7 +79,11 @@ const MenuPage: NextPage = () => {
             <li>
               <Link
                 href="/menu/dessert"
-                className={`font-['Quicksand'] text-lg lg:text-xl hover:text-amber-500 ${isReady && query.view === "dessert" ? "text-neutral-500" : "text-amber-600"}`}
+                className={`font-['Quicksand'] text-lg lg:text-xl hover:text-amber-500 ${
+                  isReady && query.view === "dessert"
+                    ? "text-neutral-500"
+                    : "text-amber-600"
+                }`}
               >
                 Dessert
               </Link>
@@ -74,7 +91,11 @@ const MenuPage: NextPage = () => {
             <li>
               <Link
                 href="/menu/dinner"
-                className={`font-['Quicksand'] text-lg lg:text-xl hover:text-amber-500 ${isReady && query.view === "dinner" ? "text-neutral-500" : "text-amber-600"}`}
+                className={`font-['Quicksand'] text-lg lg:text-xl hover:text-amber-500 ${
+                  isReady && query.view === "dinner"
+                    ? "text-neutral-500"
+                    : "text-amber-600"
+                }`}
               >
                 Dinner
               </Link>
@@ -95,6 +116,31 @@ const MenuPage: NextPage = () => {
                   type,
                 }) => (
                   <Breakfast
+                    id={id}
+                    key={id}
+                    title={title}
+                    description={description}
+                    price={price}
+                    images={images}
+                    timeStamp={timeStamp}
+                    type={type}
+                  />
+                )
+              )}
+
+            {isReady &&
+              query.view === "drink" &&
+              DrinksTemp.map(
+                ({
+                  id,
+                  title,
+                  description,
+                  price,
+                  images,
+                  timeStamp,
+                  type,
+                }) => (
+                  <Drink
                     id={id}
                     key={id}
                     title={title}
