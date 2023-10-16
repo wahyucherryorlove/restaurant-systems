@@ -41,7 +41,7 @@ const TopNavbar = () => {
           <Link
             href="/events"
             className={`font-['Quicksand'] font-normal ${
-              router.pathname === "/acara"
+              router.pathname === "/events"
                 ? "text-amber-400"
                 : "text-neutral-50"
             }`}
