@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import type { NextPage } from "next";
 
-import { CompanyInfo } from "@app/components/home/company-info";
+import { Footer } from "@components/footer";
 
 import { dummyEvents } from "@app/temp/events";
 
@@ -36,9 +36,9 @@ const EventsPage: NextPage = () => {
           </div>
         </section>
 
-        <section className="flex flex-col gap-y-5 py-[6rem] w-4/5 mx-auto">
+        <section className="flex flex-col py-[6rem] gap-y-10 w-4/5 mx-auto">
           {dummyEvents.map(({ id, title, description, tanggal, images, alt }) => (
-            <div key={id}>
+            <div key={id} className="border-b-2 pb-10 last:border-0 last:pb-0 border-amber-400">
               <article className="flex flex-col lg:flex-row gap-10">
                 <div className="relative w-full lg:w-2/3  h-[250px] md:h-[350px]">
                   <Image
@@ -70,14 +70,12 @@ const EventsPage: NextPage = () => {
                   </button>
                 </div>
               </article>
-
-              <hr className="border-amber-600 my-10" />
             </div>
 
           ))}
         </section>
 
-        <CompanyInfo />
+        <Footer />
       </main>
 
       <footer className="bg-slate-800 py-5 w-full">

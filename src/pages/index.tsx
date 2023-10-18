@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 import type { NextPage } from "next";
 
-import { CompanyInfo } from "@app/components/home/company-info";
+import { Footer } from "@components/footer";
 import { Events } from "@components/home/events";
 import { Reservasi } from "@components/home/reservasi";
 import { SeniKue } from "@components/home/seni-kue";
@@ -32,7 +32,7 @@ const Home: NextPage = () => {
 
         <Events />
 
-        <CompanyInfo />
+        <Footer />
       </main>
 
       <footer className="bg-slate-800 py-5 w-full">

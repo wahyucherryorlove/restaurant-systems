@@ -5,7 +5,7 @@ import type { NextPage } from "next";
 
 import { Breakfast } from "@app/components/menu/breakfast";
 import { Drink } from "@app/components/menu/drink";
-import { CompanyInfo } from "@app/components/home/company-info";
+import { Footer } from "@components/footer";
 
 import { BreakfastTemp } from "@app/temp/menu/breakfast";
 import { DrinksTemp } from "@app/temp/menu/drinks";
@@ -155,7 +155,7 @@ const MenuPage: NextPage = () => {
           </ul>
         </section>
 
-        <CompanyInfo />
+        <Footer />
       </main>
 
       <footer className="bg-slate-800 py-5 w-full">

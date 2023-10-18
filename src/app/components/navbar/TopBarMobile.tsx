@@ -96,7 +96,7 @@ const TopBarMobile = () => {
             <Link
               href="/reservation"
               className={`text-md font-['Quicksand'] block hover:text-amber-500 duration-100 ${
-                router.pathname === "/reservasi"
+                router.pathname === "/reservation"
                   ? "text-amber-400"
                   : "text-neutral-50"
               }`}

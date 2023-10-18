@@ -54,7 +54,7 @@ const TopNavbar = () => {
           <Link
             href="/reservation"
             className={`font-['Quicksand'] font-normal ${
-              router.pathname === "/reservasi"
+              router.pathname === "/reservation"
                 ? "text-amber-400"
                 : "text-neutral-50"
             }`}
