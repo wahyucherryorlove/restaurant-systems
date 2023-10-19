@@ -3,14 +3,15 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import type { NextPage } from "next";
 
+import { useResponsive } from "@app/utils/useResponsive";
 import { Footer } from "@components/footer";
 
 import { DataInput } from "@components/reservation/datainput";
 
 import FlameIcons from "@icons/flame.svg";
-import TimerIcons from "@icons/time.svg";
 
 const ReservationPage: NextPage = () => {
+  const width = useResponsive();
   const { isReady, query } = useRouter();
 
   return (
@@ -36,7 +37,7 @@ const ReservationPage: NextPage = () => {
           </div>
         </section>
 
-        <section className="flex flex-col py-[6rem] gap-y-10 w-4/5 mx-auto">
+        <section className="flex flex-col pt-[6rem] gap-y-10 w-4/5 mx-auto">
           <h2 className="font-['KaushanScript',cursive] font-bold text-3xl text-slate-800 text-center">
             Make a Reservation
           </h2>
@@ -44,9 +45,40 @@ const ReservationPage: NextPage = () => {
 
           <form>
             <DataInput />
-            <button className="bg-amber-500 px-6 py-3 rounded-full flex justify-center items-center mx-auto mt-8 font-['Quicksand']">Reservation</button>
+            <button className="bg-amber-500 px-6 py-3 rounded-full flex justify-center items-center mx-auto mt-8 font-['Quicksand']">
+              Reservation
+            </button>
           </form>
         </section>
+
+        {width > 768 && (
+          <section className="relative mx-auto w-4/5 py-[6rem] flex flex-col justify-center">
+            {/* <div className=""> */}
+            <div className="absolute w-full h-[200px] overflow-hidden">
+              <div className="relative w-full h-[100vh] -mt-[300px] -z-10">
+                <Image
+                  src="/assets/images/reservation/drinks.jpg"
+                  alt="Cocktail Image"
+                  layout="fill"
+                  className="object-cover object-center"
+                />
+                {/* </div> */}
+              </div>
+            </div>
+            {/* <div className="bg-neutral-900/30 absolute inset-0"></div> */}
+
+            <div className="border-2 border-neutral-50 mx-10 px-10 flex flex-col justify-center items-center py-10 gap-y-3">
+              <h2 className="text-2xl font-['Quicksand'] text-neutral-50 text-center">
+                Happy Hours for Drinks after 2am
+              </h2>
+              <p className="text-sm font-bold text-neutral-50 text-center">
+                It’s one of the few places in the city that’s licenced until 6
+                am, with a recently revamped cocktail menu and food served right
+                up until closing time.
+              </p>
+            </div>
+          </section>
+        )}
 
         <Footer />
       </main>

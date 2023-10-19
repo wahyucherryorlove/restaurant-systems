@@ -31,3 +31,14 @@ nav.navbar, aside.sidebar {
 .nav-bars span {
   @apply h-[3px] rounded-sm
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
