@@ -107,7 +107,7 @@ const TopBarMobile = () => {
 
           <li>
             <Link
-              href="/location"
+              href="/contact-us"
               className={`text-md font-['Quicksand'] block hover:text-amber-500 duration-100 ${
                 router.pathname === "/contact-us"
                   ? "text-amber-400"

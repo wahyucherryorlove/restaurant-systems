@@ -65,7 +65,7 @@ const TopNavbar = () => {
         </li>
         <li>
           <Link
-            href="/location"
+            href="/contact-us"
             className={`font-['Quicksand'] font-normal ${
               router.pathname === "/contact-us"
                 ? "text-amber-400"

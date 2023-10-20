@@ -32,7 +32,7 @@ const ContactUsPage: NextPage = () => {
         <section className="lg:w-10/12 w-full py-[6rem] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 px-4">
           <FormContactUs />
 
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d248.36866652814015!2d119.52358692115348!3d-5.120028983341043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sid!2sid!4v1697814616177!5m2!1sid!2sid" className="w-full h-[300px] lg:h-full" loading="lazy"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d248.36866949790138!2d119.5235797549031!3d-5.120021337245377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sid!2sid!4v1697844388647!5m2!1sid!2sid" className="w-full h-[300px] lg:h-full" loading="lazy"></iframe>
         </section>
       </main>
 
