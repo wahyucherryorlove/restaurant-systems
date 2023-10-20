@@ -109,12 +109,12 @@ const TopBarMobile = () => {
             <Link
               href="/location"
               className={`text-md font-['Quicksand'] block hover:text-amber-500 duration-100 ${
-                router.pathname === "/lokasi"
+                router.pathname === "/contact-us"
                   ? "text-amber-400"
                   : "text-neutral-50"
               }`}
             >
-              LOCATION
+              CONTACT US
             </Link>
           </li>
         </ul>

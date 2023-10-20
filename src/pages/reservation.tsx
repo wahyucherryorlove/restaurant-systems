@@ -72,7 +72,7 @@ const ReservationPage: NextPage = () => {
                 Happy Hours for Drinks after 2am
               </h2>
               <p className="text-sm font-bold text-neutral-50 text-center">
-                It’s one of the few places in the city that’s licenced until 6
+                It{"'"}s one of the few places in the city that{"'"}s licenced until 6
                 am, with a recently revamped cocktail menu and food served right
                 up until closing time.
               </p>

@@ -67,13 +67,13 @@ const TopNavbar = () => {
           <Link
             href="/location"
             className={`font-['Quicksand'] font-normal ${
-              router.pathname === "/lokasi"
+              router.pathname === "/contact-us"
                 ? "text-amber-400"
                 : "text-neutral-50"
             }`}
             passHref
           >
-            LOCATION
+            CONTACT US
           </Link>
         </li>
       </ul>
