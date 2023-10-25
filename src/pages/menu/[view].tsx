@@ -3,12 +3,17 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import type { NextPage } from "next";
 
-import { Breakfast } from "@app/components/menu/breakfast";
-import { Drink } from "@app/components/menu/drink";
 import { Footer } from "@components/footer";
 
+import { Breakfast } from "@app/components/menu/breakfast";
+import { Dessert } from "@app/components/menu/dessert";
+import { Drink } from "@app/components/menu/drink";
+import { Meat } from "@app/components/menu/meat";
+
 import { BreakfastTemp } from "@app/temp/menu/breakfast";
+import { DessertTemp } from "@app/temp/menu/dessert";
 import { DrinksTemp } from "@app/temp/menu/drinks";
+import { MeatTemp } from "@app/temp/menu/meat";
 
 import FlameIcons from "@icons/flame.svg";
 
@@ -88,70 +93,60 @@ const MenuPage: NextPage = () => {
                 Dessert
               </Link>
             </li>
-            <li>
-              <Link
-                href="/menu/dinner"
-                className={`font-['Quicksand'] text-lg lg:text-xl hover:text-amber-500 ${
-                  isReady && query.view === "dinner"
-                    ? "text-neutral-500"
-                    : "text-amber-600"
-                }`}
-              >
-                Dinner
-              </Link>
-            </li>
           </ul>
 
           <ul className="grid grid-cols-1 lg:grid-cols-2 gap-y-10 gap-x-10">
             {isReady &&
               query.view === "breakfast" &&
-              BreakfastTemp.map(
-                ({
-                  id,
-                  title,
-                  description,
-                  price,
-                  images,
-                  timeStamp,
-                  type,
-                }) => (
-                  <Breakfast
-                    id={id}
-                    key={id}
-                    title={title}
-                    description={description}
-                    price={price}
-                    images={images}
-                    timeStamp={timeStamp}
-                    type={type}
-                  />
-                )
-              )}
+              BreakfastTemp.map(({ id, title, description, price, images }) => (
+                <Breakfast
+                  id={id}
+                  key={id}
+                  title={title}
+                  description={description}
+                  price={price}
+                  images={images}
+                />
+              ))}
 
             {isReady &&
               query.view === "drink" &&
-              DrinksTemp.map(
-                ({
-                  id,
-                  title,
-                  description,
-                  price,
-                  images,
-                  timeStamp,
-                  type,
-                }) => (
-                  <Drink
-                    id={id}
-                    key={id}
-                    title={title}
-                    description={description}
-                    price={price}
-                    images={images}
-                    timeStamp={timeStamp}
-                    type={type}
-                  />
-                )
-              )}
+              DrinksTemp.map(({ id, title, description, price, images }) => (
+                <Drink
+                  id={id}
+                  key={id}
+                  title={title}
+                  description={description}
+                  price={price}
+                  images={images}
+                />
+              ))}
+
+            {isReady &&
+              query.view === "meat" &&
+              MeatTemp.map(({ id, title, description, price, images }) => (
+                <Meat
+                  id={id}
+                  key={id}
+                  title={title}
+                  description={description}
+                  price={price}
+                  images={images}
+                />
+              ))}
+
+            {isReady &&
+              query.view === "dessert" &&
+              DessertTemp.map(({ id, title, description, price, images }) => (
+                <Dessert
+                  id={id}
+                  key={id}
+                  title={title}
+                  description={description}
+                  price={price}
+                  images={images}
+                />
+              ))}
           </ul>
         </section>
 

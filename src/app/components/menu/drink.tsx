@@ -10,8 +10,6 @@ interface DrinkProps {
   description: string;
   price: number;
   images: string;
-  timeStamp: string;
-  type: string;
 }
 
 const Drink = ({
@@ -20,8 +18,6 @@ const Drink = ({
   description,
   price,
   images,
-  timeStamp,
-  type,
 }: DrinkProps) => {
   const [isOpen, setIsOpen] = useState(false);
 

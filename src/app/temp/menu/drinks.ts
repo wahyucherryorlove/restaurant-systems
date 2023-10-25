@@ -6,7 +6,6 @@ const DrinksTemp = [
         price: 25000,
         images: "/assets/images/menu/drinks/coffee-cappucino.jpg",
         timeStamp: "20 September 2023",
-        type: "starters"
     },
 ]
 

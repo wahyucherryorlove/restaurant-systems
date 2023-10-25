@@ -4,7 +4,7 @@ import Image from "next/legacy/image";
 import { LightBox } from "./lightbox";
 import { useResponsive } from "@app/utils/useResponsive";
 
-interface Breakfast {
+interface MeatProps {
   id: number;
   title: string;
   description: string;
@@ -12,13 +12,13 @@ interface Breakfast {
   images: string;
 }
 
-const Breakfast = ({
+const Meat = ({
   id = 0,
   title,
   description,
   price,
   images,
-}: Breakfast) => {
+}: MeatProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const width = useResponsive()
@@ -53,4 +53,4 @@ const Breakfast = ({
   );
 };
 
-export { Breakfast };
+export { Meat };

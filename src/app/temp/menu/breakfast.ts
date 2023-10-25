@@ -6,7 +6,6 @@ const BreakfastTemp = [
         price: 50000,
         images: "/assets/images/menu/breakfast/pancake-empat-layer.jpg",
         timeStamp: "20 September 2023",
-        type: "starters"
     },
     {
         id: 2,
@@ -15,7 +14,6 @@ const BreakfastTemp = [
         price: 120000,
         images: "/assets/images/menu/breakfast/omelet-with-daging.jpg",
         timeStamp: "5 Oktober 2023",
-        type: "drinking"
     },
     {
         id: 3,
@@ -24,7 +22,6 @@ const BreakfastTemp = [
         price: 34000,
         images: "/assets/images/menu/breakfast/calabrese-scramble.jpg",
         timeStamp: "16 September 2023",
-        type: "meat"
     },
     {
         id: 4,
@@ -33,7 +30,6 @@ const BreakfastTemp = [
         price: 25500,
         images: "/assets/images/menu/breakfast/wafel-belgia.jpg",
         timeStamp: "23 April 2023",
-        type: "dessert"
     }
 ]
 
