@@ -34,16 +34,29 @@ const SeniKue = () => {
 
         <div className="flex flex-col sm:flex-row gap-y-8 gap-x-8">
           <div className="">
-            <h4 className="font-['Quicksand'] font-bold text-lg">Wahyudi Umar</h4>
-            <span className="font-['Quicksand'] font-normal text-sm text-amber-600">Founder</span>
+            <h4 className="font-['Quicksand'] font-bold text-lg">
+              Wahyudi Umar
+            </h4>
+            <span className="font-['Quicksand'] font-normal text-sm text-amber-600">
+              Founder
+            </span>
           </div>
           <div className="relative w-[153px] h-[90px] text-center leading-[90px]">
-            <Image src="/assets/images/home/ttd.png" alt="Tanda tangan" layout="fill" />
+            <Image
+              src="/assets/images/home/ttd.png"
+              alt="Tanda tangan"
+              layout="fill"
+            />
           </div>
         </div>
       </div>
       <div className="relative w-full sm:w-[500px] lg:w-full h-[350px] sm:h-[500px]">
-        <Image src="/assets/images/home/profil.jpg" alt="Chef Restaurant" layout="fill" />
+        <Image
+          src="/assets/images/home/profi.jpg"
+          alt="Chef Restaurant"
+          layout="fill"
+          className="object-cover"
+        />
       </div>
     </section>
   );
